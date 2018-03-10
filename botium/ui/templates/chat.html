@@ -1,0 +1,60 @@
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/chat.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+
+    <script src="/static/js/chat.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>Botium</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 chat-area" id="chat-area">
+            <ul class="chat">
+            </ul>
+            <div class="footer">
+			
+				<div class="input-group" >
+				    <span class="input-group-btn" >
+						<center id="quick_replies" style="height: 43px">
+						</center>
+					</span>
+                </div>
+				
+                <div class="input-group">
+                    <input id="btn-input" type="text" class="form-control input-md"
+                           placeholder="Type your message here..."/>
+                    <span class="input-group-btn">
+                                <button class="btn btn-primary btn-md" id="btn-chat">
+                                    Send</button>
+                            </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h4 style="margin: 0px 0px 0px 20px">POST /api</h4>
+            <pre class="payloadPreview">
+            </pre>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+    <footer class="footer">
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Botium doesn't require anything to perform
+# However, some examples require several things
+#
+# pip install flask # required by UI plus facebook_integration example
+# pip install spacy # for NLP and corresponding examples
+# pip install rasa_nlu # for NLP and corresponding examples
