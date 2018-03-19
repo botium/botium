@@ -1,4 +1,5 @@
 # Botium
+[![Build Status](https://travis-ci.org/botium/botium.svg?branch=master)](https://travis-ci.org/botium/botium)
 
 This is a python Bot Framework that makes bot development easy, straightforward and enjoyable.
 
