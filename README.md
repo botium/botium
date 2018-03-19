@@ -1,5 +1,6 @@
 # Botium
 [![Build Status](https://travis-ci.org/botium/botium.svg?branch=master)](https://travis-ci.org/botium/botium)
+[![Coverage Status](https://coveralls.io/repos/github/botium/botium/badge.svg?branch=master)](https://coveralls.io/github/botium/botium?branch=master)
 
 This is a python Bot Framework that makes bot development easy, straightforward and enjoyable.
 
