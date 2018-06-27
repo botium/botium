@@ -127,9 +127,7 @@ class Ask(Action):
                 # bad answer
 
                 # direct options to choose from
-                print("-OPS", self)
                 direct_options = all([type(o) in {str, int, float} for o in list_of(self.options)])
-                print("-do", direct_options)
                 if direct_options:
                     if self.get("_n", 0) >= config.RESPONSE_REPEAT_N:
                         text = config.MESSAGE_ASK_REPEAT_DIRECT_OPTIONS

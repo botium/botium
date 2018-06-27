@@ -11,6 +11,11 @@ import inspect
 import uuid
 import logging
 
+def clean_text(text, lower=True):
+    # TODO: remove bad characters
+    if lower:
+        text = text.lower()
+    return " ".join(text.split())
 
 def signal_hash():
     return str(uuid.uuid4())
@@ -104,7 +109,7 @@ def prepare_text(text):
             text = text[0].upper() + text[1:]
 
         # adding a dot
-        if text[-1] not in {'.', '!', '?', '"'}:
+        if text[-1] not in {'.', '!', '?', '"', ":", "'"}:
             text += '.'
 
     return text

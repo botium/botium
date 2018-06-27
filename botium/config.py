@@ -78,6 +78,10 @@ class Config:
                                 skip=['skip', 's'],
                                 yes=CONFIRM_OPTIONS['yes'])
 
+    # lowercase things before matching
+    # TODO: add test
+    MATCH_LOWER_CASE = True
+
     # history limit (how much to story in progress.history)
     HISTORY_LIMIT = 64
     # log (user:messages and bot:says)

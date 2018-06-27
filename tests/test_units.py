@@ -32,6 +32,9 @@ class botiumUnitTest(unittest.TestCase):
     # ===== #
     # UTILS #
     # ===== #
+    def test_clean_text(self):
+        assert clean_text(' I   AM  ! ') == 'i am !'
+
     def test_small_things(self):
         # list_of
         self.assertTrue(list_of(None) == [])

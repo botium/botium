@@ -6,6 +6,7 @@ author: Deniss Stepanovs
 from .entities import Signal
 from .utils import *
 import logging
+from .config import config
 
 from types import MethodType, FunctionType
 
@@ -171,7 +172,7 @@ class Matcher(Signal):
 
         elif type(option) == str:
             # minimum similarity for strings
-            similarity = levenshtein_similarity(option, text)
+            similarity = levenshtein_similarity(option.lower(), text.lower()) if config.MATCH_LOWER_CASE else levenshtein_similarity(option, text)
             if similarity > 0:
                 return {'match': option, 'confidence': levenshtein_similarity(option, text)}
             else:
@@ -232,7 +233,7 @@ class Monitor(Signal):
 
         # first message
         if 'Events' in _areas:
-            self['is_first_message'] = _areas['Events']['counts.n'] == 1
+            self['is_first_message'] = _areas['Events']['counts.Signal.Message.n'] == 1
 
             # last message time
             messages = [d for d in _areas['Events']['history'] if d['signal_name'] == "Message"]
