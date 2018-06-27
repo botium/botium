@@ -236,6 +236,14 @@ class Actions(Area, StackState):
         if not self.is_empty():
             # poping the action
             action = self.pop()
+
+            # TODO: a bit ugly - actions can be intents! this piece of code checks this and extracts actions
+            if action._is_relative_to("@Intent"):
+                actions = self._process_signal(action)
+                if actions:
+                    action = actions[0]
+                    self.push(actions[1:])
+
             # emmiting the initial signal too
             return [action] + self._process_signal(action)
 
