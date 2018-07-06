@@ -322,7 +322,7 @@ class Pause(Action):
             actions = _actions.all()
             if actions:
                 # creating a trigger to get actions back
-                trigger = SetTrigger(trigger=Trigger(**self, actions=actions))
+                trigger = SetTrigger(trigger=Trigger(self, actions=actions))
                 # cleaning action queue
                 _actions.clear()
                 return trigger
